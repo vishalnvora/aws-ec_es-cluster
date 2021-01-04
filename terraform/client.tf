@@ -25,7 +25,7 @@ data "template_file" "client_userdata_script" {
 
 resource "aws_launch_configuration" "client" {
   // Only create if it's not a single-node configuration
-  count = "var.cluster_mode == "true" ? "1" : "0" } "
+  count = "var.cluster_mode == "true" ? "1" : "0"  "
   name_prefix = "elasticsearch-var.es_cluster-client-nodes"
   image_id = "data.aws_ami.kibana_client.id"
   instance_type = "var.master_instance_type"
@@ -42,8 +42,8 @@ resource "aws_launch_configuration" "client" {
 
 resource "aws_autoscaling_group" "client_nodes" {
   // Only create if it's not a single-node launch_configuration
-  count = "var.cluster_mode == "true" ? "1" : "0"}"
-  name = "elasticsearch-var.es_cluster}-client-nodes"
+  count = "var.cluster_mode == "true" ? "1" : "0" "
+  name = "elasticsearch-var.es_cluster -client-nodes"
   max_size = "var.clients_count"
   min_size = "var.clients_count"
   desired_capacity = "var.clients_count"
@@ -80,5 +80,5 @@ resource "aws_autoscaling_group" "client_nodes" {
   lifecycle {
     create_before_destroy = true
   }
-
+}
 
