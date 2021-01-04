@@ -39,27 +39,22 @@ variable "environment" {
 }
 
 variable "data_instance_type" {
-  type = "string"
-  default = "t2.micro"
+ default = "t2.micro"
 }
 
 variable "singlenode_instance_type" {
-  type = "string"
-  default = "t2.micro"
+ default = "t2.micro"
 }
 
 variable "master_instance_type" {
-  type = "string"
-  default = "t2.micro"
+ default = "t2.micro"
 }
 
 variable "elasticsearch_volume_size" {
-  type = "string"
   default = "10" # gb
 }
 
 variable "volume_name" {
-  type = "string"
   default = "/dev/xvdh"
 }
 
