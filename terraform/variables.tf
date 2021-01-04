@@ -1,6 +1,7 @@
 ### MANDATORY ###
 variable "es_cluster" {
   description = "Name of the elasticsearch cluster, used in node discovery"
+  type = "string"
   default  = "es-prod-cluster"
 }
 
@@ -34,10 +35,12 @@ variable "vpc_subnets_private" {
 
 variable "key_name" {
   description = "Key name to be used with the launched EC2 instances."
+  type = "string"
   default = "elasticsearch"
 }
 
 variable "environment" {
+  type = "string"  
   default = "default"
 }
 
@@ -62,18 +65,22 @@ variable "elasticsearch_volume_size" {
 }
 
 variable "volume_name" {
+  type = "string"
   default = "/dev/xvdh"
 }
 
 variable "volume_encryption" {
+  type = "bool"
   default = true
 }
 
 variable "elasticsearch_data_dir" {
+  type = "string"
   default = "/opt/elasticsearch/data"
 }
 
 variable "elasticsearch_logs_dir" {
+  type = "string"
   default = "/var/log/elasticsearch"
 }
 
@@ -96,28 +103,34 @@ variable "master_heap_size" {
 }
 
 variable "masters_count" {
+  type = "init"
   default = "1"
 }
 
 variable "datas_count" {
+  type = "init"
   default = "2"
 }
 
 variable "clients_count" {
+  type = "init"
   default = "1"
 }
 
 # whether or not to enable x-pack security on the cluster
 variable "security_enabled" {
+  type = "bool"
   default = "false"
 }
 
 # client nodes have nginx installed on them, these credentials are used for basic auth
 variable "client_user" {
+  type = "string"
   default = "admin"
 }
 variable "client_pwd" {
-  default = "changeme"
+  type = "string"
+  default = "changeit1"
 }
 
 # the ability to add additional existing security groups.
