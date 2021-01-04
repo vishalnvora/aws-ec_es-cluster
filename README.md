@@ -157,7 +157,7 @@ packer build -only=amazon-ebs -var-file=variables.json elasticsearch-node.packer
 After successfully build AMI your will get an AMI ID. copy this AMI ID and make change `variables.json` file accordingly. After that run below commnad.
 
 ```bash
-packer build -only=amazon-ebs -var-file=variables.json kibana-node.packer.json
+packer build -only=amazon-ebs -var-file=kib-var.json kibana-node.packer.json
 ```
 
 ## Terraform
