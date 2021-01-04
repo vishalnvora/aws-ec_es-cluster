@@ -25,7 +25,7 @@ data "template_file" "client_userdata_script" {
 
 resource "aws_launch_configuration" "client" {
   // Only create if it's not a single-node configuration
-  count = "var.cluster_mode == "true" ? "1" : "0"}"
+  count = "var.cluster_mode == "true" ? "1" : "0" "
   name_prefix = "elasticsearch-var.es_cluster-client-nodes"
   image_id = "data.aws_ami.kibana_client.id"
   instance_type = "var.master_instance_type"
