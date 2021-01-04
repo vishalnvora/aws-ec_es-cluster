@@ -3,7 +3,7 @@
 sudo rm /boot/grub/menu.lst
 sudo apt upgrade -y
 sudo add-apt-repository ppa:deadsnakes/ppa
-sudo apt install -y software-properties-common git python-dev htop ntp jq apt-transport-https python3.7
+sudo apt install -y software-properties-common git python-dev htop ntp jq apt-transport-https python3.8 python3.8-distutils
 sudo apt update -y 
 
 
