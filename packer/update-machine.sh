@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo apt-y update
+sudo apt -y update
 sudo rm /boot/grub/menu.lst
 
 sudo apt upgrade -y
