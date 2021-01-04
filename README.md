@@ -250,8 +250,6 @@ Dashboard --> Import --> upload .json File --> select `es-dashboard.json` from m
 ![grafana-dashboard](images/grafana-dashboard-import-2.jpg)
 ![grafana-dashboard](images/grafana-dashborad.jpg)
 
-### Kibana Dashboard:
-![grafana-dashboard](images/kibana.jpg)
 
 # Troubleshooting:
 To be created later.
