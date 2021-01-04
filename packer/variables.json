@@ -1,5 +1,5 @@
 {
   "elasticsearch_version": "",
-  "aws_region": "ap-southeast-1",
-  "aws_elasticsearch_ami": "ami-ad1e7dd1"
+  "aws_region": "us-east-2",
+  "aws_elasticsearch_ami": "ami-0516b36ba0c479357"
 }
