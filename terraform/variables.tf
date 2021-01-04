@@ -1,7 +1,6 @@
 ### MANDATORY ###
 variable "es_cluster" {
   description = "Name of the elasticsearch cluster, used in node discovery"
-  type = "string"
   default  = "es-prod-cluster"
 }
 
@@ -12,12 +11,10 @@ variable "aws_region" {
 
 variable "vpc_id" {
   description = "VPC ID to create the Elasticsearch cluster in"
-  type = "string"
   default = "vpc-6d7bc306"
 }
 
 variable "availability_zones" {
-  type = "list"
   description = "AWS region to launch servers; if not set the available zones will be detected automatically"
   default = ["us-east-2a","us-east-2b"]
 }
@@ -28,19 +25,16 @@ variable "cluster_mode" {
 }
 
 variable "vpc_subnets_private" {
-  type = "list"
   description = "vpc_subnet_private"
   default = ["subnet-addf74db","subnet-e74af383"]
 }
 
 variable "key_name" {
   description = "Key name to be used with the launched EC2 instances."
-  type = "string"
   default = "elasticsearch"
 }
 
 variable "environment" {
-  type = "string"  
   default = "default"
 }
 
