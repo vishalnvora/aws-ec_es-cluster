@@ -1,6 +1,6 @@
 data "template_file" "data_userdata_script" {
-  template = "file("${path.root}/../templates/user_data.sh")"
-  count = "${var.cluster_mode == "true" ? "1" : "0"}"
+  template = "file("path.root/../templates/user_data.sh")"
+  count = "var.cluster_mode == "true" ? "1" : "0" "
 
   vars {
     cloud_provider          = "aws"
@@ -25,7 +25,7 @@ data "template_file" "data_userdata_script" {
 
 resource "aws_launch_configuration" "data" {
   count = "var.cluster_mode == "true" ? "1" : "0"}"
-  name_prefix = "elasticsearch-${var.es_cluster}-data-nodes"
+  name_prefix = "elasticsearch-var.es_cluster-data-nodes"
   image_id = "data.aws_ami.elasticsearch.id"
   instance_type = "var.data_instance_type"
   security_groups = ["aws_security_group.elasticsearch_security_group.id"]
@@ -49,7 +49,7 @@ resource "aws_launch_configuration" "data" {
 
 resource "aws_autoscaling_group" "data_nodes" {
   count = "var.cluster_mode == "true" ? "1" : "0""
-  name = "elasticsearch-${var.es_cluster}-data-nodes"
+  name = "elasticsearch-var.es_cluster-data-nodes"
   max_size = "var.datas_count"
   min_size = "var.datas_count"
   desired_capacity = "var.datas_count"
