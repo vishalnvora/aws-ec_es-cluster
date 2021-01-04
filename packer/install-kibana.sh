@@ -3,15 +3,15 @@
 # Get the PGP Key
 wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
 
-echo "deb https://artifacts.elastic.co/packages/5.x/apt stable main" | tee -a /etc/apt/sources.list.d/elastic-5.x.list
+echo "deb https://artifacts.elastic.co/packages/7.x/apt stable main" | tee -a /etc/apt/sources.list.d/elastic-7.x.list
 
 sudo apt-get update
 if [ -z "$ES_VERSION" ]; then
     echo "Installing latest Kibana version"
-    sudo apt-get install kibana
+    sudo apt-get install -y kibana 
 else
     echo "Installing Kibana version $ES_VERSION"
-    sudo apt-get install kibana=$ES_VERSION
+    sudo apt-get install -y kibana=$ES_VERSION
 fi
 
 cd /usr/share/kibana/
