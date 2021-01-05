@@ -214,7 +214,7 @@ Terraform output will give you a ELB DNS endpoint.
 ```shell
 Outputs:
 clients_dns = [
-    internal-es-prod-cluster-client-lb-1199521904.ap-southeast-1.elb.amazonaws.com
+	internal-es-prod-cluster-client-lb-1332883358.us-east-2.elb.amazonaws.com
 ]
 ```
 
@@ -225,7 +225,7 @@ See [this guide](https://blog.gruntwork.io/how-to-manage-terraform-state-28f5697
 # Monitoning
 
 **cerebro:** 
-Hit your ELB endpoint `http://internal-es-prod-cluster-client-lb-1199521904.ap-southeast-1.elb.amazonaws.com/cerebro`
+Hit your ELB endpoint `http://internal-es-prod-cluster-client-lb-1332883358.us-east-2.elb.amazonaws.com/cerebro`
 
 ### configure cerebro
 
