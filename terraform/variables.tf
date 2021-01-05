@@ -1,3 +1,4 @@
+************************************
 ### MANDATORY ###
 variable "es_cluster" {
   description = "Name of the elasticsearch cluster, used in node discovery"
