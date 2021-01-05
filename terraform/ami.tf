@@ -8,6 +8,7 @@ data "aws_ami" "elasticsearch" {
     name = "tag:ImageType"
     values = ["elasticsearch-packer-image"]
   }
+  owners = ["${local.ami_owner}"]
   most_recent = true
 }
 
@@ -21,5 +22,6 @@ data "aws_ami" "kibana_client" {
     name = "tag:ImageType"
     values = ["kibana-packer-image"]
   }
+  owners = ["${local.ami_owner}"]
   most_recent = true
 }

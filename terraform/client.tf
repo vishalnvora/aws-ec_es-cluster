@@ -34,7 +34,7 @@ resource "aws_launch_configuration" "client" {
   iam_instance_profile = "${aws_iam_instance_profile.elasticsearch.id}"
   user_data = "${data.template_file.client_userdata_script.rendered}"
   key_name = "${var.key_name}"
-
+  
   lifecycle {
     create_before_destroy = true
   }
