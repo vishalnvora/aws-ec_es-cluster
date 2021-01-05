@@ -104,27 +104,37 @@ aws iam create-role --role-name packer --assume-role-policy-document '{
 Response will look something like this:
 
 ```json
-{
+	{
+        {
     "Role": {
-        "AssumeRolePolicyDocument": {
+	
+	 "AssumeRolePolicyDocument": 
+	        {
             "Version": "2012-10-17",
-            "Statement": {
-                "Action": "sts:AssumeRole",
-                "Effect": "Allow",
-                "Principal": {
-                    "Service": "ec2.amazonaws.com"
+            "Statement":
+                {
+                    "Action": "sts:AssumeRole",
+                    "Principal": 
+					{
+                        "Service": "ec2.amazonaws.com"
+                    },
+                    "Effect": "Allow",
+                    "Sid": ""
                 }
             }
+            }
         },
-        "RoleId": "AROAJ7Q2L7NZJHZBB6JKY",
-        "CreateDate": "2021-01-04 18:40 UTC+0530",
+        "RoleId": "AROARP2XNILJVEJV6LZN3",
+        "CreateDate": "2021-01-04T13:10:18Z",
         "RoleName": "packer",
         "Path": "/",
+        "RoleLastUsed": {
+            "Region": "us-east-2",
+            "LastUsedDate": "2021-01-04T22:55:00Z"
+        },
         "Arn": "arn:aws:iam::102725665491:role/packer"
     }
-}
 ```
-
 Follow up by execting the following
 
 ```bash
