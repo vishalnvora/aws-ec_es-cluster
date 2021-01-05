@@ -117,10 +117,10 @@ Response will look something like this:
             }
         },
         "RoleId": "AROAJ7Q2L7NZJHZBB6JKY",
-        "CreateDate": "2016-12-16T13:22:47.254Z",
+        "CreateDate": "2021-01-04 18:40 UTC+0530",
         "RoleName": "packer",
         "Path": "/",
-        "Arn": "arn:aws:iam::611111111117:role/packer"
+        "Arn": "arn:aws:iam::102725665491:role/packer"
     }
 }
 ```
