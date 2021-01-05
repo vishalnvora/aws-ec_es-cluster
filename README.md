@@ -246,7 +246,7 @@ enter `http://localhost:9200` as a elasticsearch endpoint.
 ![cerebro dashboard](images/cerebro-dash-2.jpg)
 
 **Grafana:** 
-Hit your ELB endpoint `http://internal-es-prod-cluster-client-lb-1199521904.ap-southeast-1.elb.amazonaws.com:3000` 
+Hit your ELB endpoint `http://internal-es-prod-cluster-client-lb-1332883358.us-east-2.elb.amazonaws.com:3000` 
 
 
 ### configure Grafana:
